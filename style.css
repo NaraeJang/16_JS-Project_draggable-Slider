@@ -6,5 +6,65 @@
   box-sizing: border-box;
   margin: 0;
   padding: 0;
+}
+
+body {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  background-color: #343f4f;
   font-family: "Poppins", sans-serif;
+  padding: 0 35px;
+}
+.wrapper {
+  max-width: 1200px;
+  position: relative;
+}
+.wrapper .carousel {
+  font-size: 0px;
+  cursor: pointer;
+  white-space: nowrap;
+  overflow: hidden;
+}
+
+.wrapper i {
+  background: #fff;
+  height: 46px;
+  width: 46px;
+  border-radius: 100%;
+  text-align: center;
+  line-height: 46px;
+  font-size: 1.2rem;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+}
+.wrapper i:first-child {
+  left: -23px;
+}
+.wrapper i:last-child {
+  right: -23px;
+}
+
+.carousel img {
+  height: 340px;
+  width: calc(100% / 3);
+  margin-left: 14px;
+  object-fit: cover;
+}
+
+.carousel img:first-child {
+  margin-left: 0;
+}
+
+@media screen and (max-width: 900px) {
+  .carousel img {
+    width: calc(100% / 2);
+  }
+}
+@media screen and (max-width: 550px) {
+  .carousel img {
+    width: calc(100% / 1);
+  }
 }
